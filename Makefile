@@ -18,6 +18,5 @@ render:
 dev:
 	hugo serve --buildDrafts --buildFuture
 
-setup-cd:
-	cp -f hooks/pre-commit .git/hooks
-	chmod +x .git/hooks/pre-commit
+publish:
+	./publish.sh
