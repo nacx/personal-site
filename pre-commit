@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SITE_ROOT=$(dirname ${BASH_SOURCE[0]})/../..
+cd ${SITE_ROOT}
+
+echo "Rendering site..."
+make render
+
+echo "Adding generated site files to the commit..."
+git add docs

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Ignasi Barrera</title>
+    <link>https://nacx.github.io/categories/publications/</link>
+    <description>Recent content in Publications on Ignasi Barrera</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://nacx.github.io/categories/publications/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Publications</title>
+      <link>https://nacx.github.io/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nacx.github.io/publications/</guid>
+      <description>(Spanish) CIDEX - Intercambio distribuido de alertas para la gestión de ataques coordinados
+Los ataques e intrusiones contra sistemas informáticos suponen a diario grandes pérdidas de ingresos en sitios y aplicaciones de comercio electrónico. La prevención de estos ataques no es posible considerando únicamente información aislada desde los distintos elementos de una red. Una visión global del entorno al completo es necesaria para poder detectar y reparar las distintas acciones que componen dichos ataques.</description>
+    </item>
+    
+  </channel>
+</rss>

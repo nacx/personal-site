@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on Ignasi Barrera</title>
+    <link>https://nacx.github.io/tags/talks/</link>
+    <description>Recent content in Talks on Ignasi Barrera</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://nacx.github.io/tags/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Talks</title>
+      <link>https://nacx.github.io/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nacx.github.io/talks/</guid>
+      <description>Here are some of the talks I&amp;rsquo;ve delivered recently and in the past few years. All the slides for my talks can be found in Speaker Deck.
+ Do you need a service mesh? CodeMotion Madrid, 2018
+In this talk I explored what a service mesh is and what they can do for your microservice web backends. Are the claims of observability, resiliency, and WAF features real? Are they useful during development, production, or both?</description>
+    </item>
+    
+  </channel>
+</rss>

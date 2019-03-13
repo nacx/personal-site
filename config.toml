@@ -1,0 +1,53 @@
+# Basic configuration
+
+baseURL = "https://nacx.github.io"
+builddrafts = false
+languageCode = "en-US"
+publishdir = "docs"
+enableRobotsTXT = true
+
+theme = "hugo-goa"
+
+author = "Ignasi Barrera"
+title = "Ignasi Barrera"
+
+# Site settings
+[params]
+  author = "Ignasi Barrera"
+  intro = "Software Engineer. Open Source contributor."
+  description = "Founding Engineer at [Tetrate](https://tetrate.io)<br/>[Apache Software Foundation](https://www.apache.org) proud Member"
+  authorimage = "headshot.png"
+  dateformat = "Jan 2, 2006"
+
+# Site meta settings
+[params.meta]
+  description = "Ignasi Barrera"
+  keywords = "hugo,nacx,Ignasi Barrera,Apache"
+
+# Social media
+[params.social]
+  github = "nacx"
+  twitter = "IgnasiBarrera"
+  linkedin = "ignasibarrera"
+
+[params.extra]
+  copyright = "© 2019. Ignasi Barrera. [Licensed unde the Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)."
+  poweredby = true
+  highlightjs = true
+  socialmarkup = true
+
+[[menu.main]]
+  name = "about me"
+  identifier = "about"
+  weight = 100
+  url = "/about/"
+[[menu.main]]
+  name = "talks"
+  identifier = "talks"
+  weight = 200
+  url = "/talks/"
+[[menu.main]]
+  name = "publications"
+  identifier = "publications"
+  weight = 201
+  url = "/publications/"
