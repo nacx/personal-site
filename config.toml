@@ -3,7 +3,6 @@
 baseURL = "https://nacx.github.io"
 builddrafts = false
 languageCode = "en-US"
-publishdir = "docs"
 enableRobotsTXT = true
 
 theme = "hugo-goa"
