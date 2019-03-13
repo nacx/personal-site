@@ -12,3 +12,4 @@ popd
 
 git add public
 git commit -m "Update submodule to the last published version"
+git push origin master
