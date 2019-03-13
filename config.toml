@@ -1,6 +1,6 @@
 # Basic configuration
 
-baseURL = "https://nacx.github.io"
+baseURL = "https://nacx.dev"
 builddrafts = false
 languageCode = "en-US"
 enableRobotsTXT = true
