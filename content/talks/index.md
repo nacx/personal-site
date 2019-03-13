@@ -24,7 +24,7 @@ In this talk I explored what a service mesh is and what they can do for your mic
 <hr/>
 ### Standalone Neutron: How we integrated it with Abiquo
 
-_OpenStack BCN 7th birthday meetup_
+_OpenStack BCN 7th birthday meetup, 2017_
 
 This is a talk I gave at the OpenStack BCN 7th birthday meetup. 
 In it I explain how we integrated a standalone Neutron with Abiquo to implement an SDN solution without a full OpenStack deployment.

@@ -10,7 +10,7 @@ title = "Publications"
 showpagemeta = false
 +++
 
-_(Spanish)_ [CIDEX - Intercambio distribuido de alertas para la gestión de ataques coordinados](http://deic.uab.es/~joaquin/papers/recsi-cidex.pdf)
+**2006** _(Spanish)_ - [CIDEX: Intercambio distribuido de alertas para la gestión de ataques coordinados](http://deic.uab.es/~joaquin/papers/recsi-cidex.pdf)
 
 Los ataques e intrusiones contra sistemas informáticos suponen a diario grandes pérdidas de ingresos en sitios y aplicaciones de comercio electrónico.
 La prevención de estos ataques no es posible considerando únicamente información aislada desde los distintos elementos de una red. Una visión global del entorno al completo es necesaria para poder detectar y reparar las distintas acciones que componen dichos ataques.
