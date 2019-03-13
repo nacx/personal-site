@@ -26,3 +26,4 @@ The site can be easily published to GitHub pages as follows:
 ```bash
 make publish
 ```
+

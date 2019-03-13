@@ -30,7 +30,7 @@ title = "Ignasi Barrera"
   linkedin = "ignasibarrera"
 
 [params.extra]
-  copyright = "© 2019. Ignasi Barrera. [Licensed unde the Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)."
+  copyright = "© 2019. Ignasi Barrera. Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)."
   poweredby = true
   highlightjs = true
   socialmarkup = true
