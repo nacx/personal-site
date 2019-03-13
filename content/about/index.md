@@ -22,6 +22,3 @@ Currently working as the Security Lead at [Tetrate](https://tetrate.io) and buil
 hybrid and multi-cloud world.
 
 I am a Member of the [Apache Software Foundation](https://www.apache.org), where I help with community outreach and the promotion of Open Source and _The Apache Way_, and committer and member of the [Incubator](https://incubator.apache.org), Community Development, and [Apache jclouds](https://jclouds.apache.org) project management committees.
-
-
-
