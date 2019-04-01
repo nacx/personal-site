@@ -16,7 +16,7 @@ GPG Key<br/>
 </div>
 <br/>
 
-I am a researcher in cloud computing, virtualization and container technologies, and open source community contributor. My research interests revolve around distributed and highly concurrent systems, large cloud infrastructures, networking and SDN, and security.
+I am a researcher in cloud computing, virtualization and container technologies, and open source community contributor. My research interests revolve around distributed and highly concurrent systems, large cloud infrastructures, networking, and security.
 
 Currently working as the Security Lead at [Tetrate](https://tetrate.io) and building a Service Mesh platform for the
 hybrid and multi-cloud world.

@@ -13,9 +13,21 @@ showpagemeta = false
 Here are some of the talks I've delivered recently and in the past few years. All the slides for my talks can be found in [Speaker Deck](https://speakerdeck.com/nacx).
 
 <hr/>
+### Next Generation Access Control for the Multi-Cloud World
+
+_Service Mesh Day San Francisco, 2019_
+
+NGAC is a fundamental reworking of traditional access control into a form suited to the needs of the modern, distributed, interconnected enterprise. NGAC is based on a flexible infrastructure that can provide access control services for a number of different types of resources, accessed by a number of different types of applications and users.
+
+In this joint talk with [David Ferraiolo](https://www.nist.gov/people/david-ferraiolo) we introduced NGAC and did a live demo showing how it can be applied to augment traditional RBAC with high level concepts such as time and location in an efficient and scalable way.
+
+Video | Slides _(Coming soon)_
+
+
+<hr/>
 ### Do you need a service mesh?
 
-_CodeMotion Madrid, 2018_
+_CodeMotion Madrid, 2018 (Spanish)_
 
 In this talk I explored what a service mesh is and what they can do for your microservice web backends. Are the claims of observability, resiliency, and WAF features real? Are they useful during development, production, or both? Using pictures and demos, we’ll find out! This session also briefly covered how a service mesh works, giving us a mental model with which to explore and evaluate after the talk.
 
