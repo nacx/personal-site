@@ -1,0 +1,16 @@
+<div class="footer wrapper">
+	<nav class="nav">
+		<div style="text-align: center">
+			© {{ dateFormat "2006" now }} {{ .Site.Params.copyright }}. Licensed under the {{ .Site.Params.license | markdownify }}<br/>
+			Built with <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/hadisinaee/avicenna">Avicenna Theme</a>
+		</div>
+	</nav>
+</div>
+
+{{ template "_internal/google_analytics_async.html" . }}
+{{- with .Site.Params.Social -}}
+<script>
+	feather.replace()
+
+</script>
+{{- end -}}

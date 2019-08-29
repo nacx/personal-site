@@ -1,0 +1,39 @@
+<div class="introduction">
+	{{ with .Site.Params.talks }}
+	<h4>Talks</h4>
+	{{- range $index, $talks := $.Site.Params.talks -}}
+	<ul>
+		{{ range $elem_index, $talk := $talks.talk }}
+		<li>
+			{{ if $talk.link }}
+			<a href="{{ $talk.link }}" class="publications"> {{ $talk.name }}</a>
+			{{ else }}
+			<p class="publications"> <strong>{{ $talk.name }}</strong></p>
+			{{ end }}
+			<span class="collaborators">
+				<em>{{ $talk.event | markdownify }}</em>
+			</span>
+
+			{{ if or ($talk.slides_link) $talk.video_link }}
+			<span class="code_blog">
+				{{ with $talk.video_link }}
+				[<a href="{{ $talk.video_link }}">video</a>]
+				{{ end }}
+				
+				{{ with $talk.slides_link }}
+				[<a href="{{ $talk.slides_link }}">slides</a>]
+				{{ end }}
+			</span>
+			{{ end }}
+
+			{{ with $talk.description }}
+			<span class="project_description">
+				{{ . | markdownify}}
+			</span>
+			{{ end }}
+		</li>
+		{{ end }}
+	</ul>
+	{{- end -}}
+	{{- end -}}
+</div>

@@ -1,53 +1,115 @@
-# Basic configuration
-
 baseURL = "https://nacx.dev"
+title = "Ignasi Barrera"
+theme = "avicenna"
 builddrafts = false
 languageCode = "en-US"
 enableRobotsTXT = true
 
-theme = "hugo-goa"
-
-author = "Ignasi Barrera"
-title = "Ignasi Barrera"
-
-# Site settings
 [params]
-  author = "Ignasi Barrera"
-  intro = "Software Engineer. Open Source contributor."
-  description = "Founding Engineer at [Tetrate](https://tetrate.io)<br/>[Apache Software Foundation](https://www.apache.org) proud Member"
-  authorimage = "headshot.png"
-  dateformat = "Jan 2, 2006"
+  subtitle= "Software Engineer. Open Source contributor."
+  copyright = "Ignasi Barrera"
+  license = "[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)"
 
-# Site meta settings
-[params.meta]
-  description = "Ignasi Barrera"
-  keywords = "hugo,nacx,Ignasi Barrera,Apache"
+[[params.affilation]]
+  name = "Tetrate"
+  url = "https://tetrate.io"
+  position = "Founding Engineer"
 
-# Social media
-[params.social]
-  github = "nacx"
-  twitter = "IgnasiBarrera"
-  linkedin = "ignasibarrera"
-  keybase = "nacx"
+[[params.affilation]]
+  name = "The Apache Software Foundation"
+  url = "https://apache.org"
+  position = "Member"
 
-[params.extra]
-  copyright = "© 2019. Ignasi Barrera. Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)."
-  poweredby = true
-  highlightjs = true
-  socialmarkup = true
+[[params.social]]
+  name = "GitHub"
+  icon = "github"
+  url = "https://github.com/nacx"
 
-[[menu.main]]
-  name = "about me"
-  identifier = "about"
-  weight = 100
-  url = "/about/"
-[[menu.main]]
-  name = "talks"
-  identifier = "talks"
-  weight = 200
-  url = "/talks/"
-[[menu.main]]
-  name = "publications"
-  identifier = "publications"
-  weight = 201
-  url = "/publications/"
+[[params.social]]
+  name = "Twitter"
+  icon = "twitter"
+  url = "https://twitter.com/IgnasiBarrera"
+
+
+[[params.social]]
+  name = "LinkedIn"
+  icon = "linkedin"
+  url = "https://www.linkedin.com/in/ignasibarrera"
+
+[[params.social]]
+  name = "Keybase"
+  icon = "lock"
+  url = "https://keybase.io/nacx"
+
+[[params.introduction.paragraph]]
+  text="""I am a researcher in cloud computing, virtualization and container technologies, and open source community
+  contributor.
+  My research interests revolve around distributed and highly concurrent systems, large cloud infrastructures, networking,
+  and security.
+   """
+[[params.introduction.paragraph]]
+  text="""I am one of the founding engineers at [Tetrate](https://tetrate.io), currently building a Service Mesh platform
+  for the hybrid and multi-cloud world.
+  """
+
+[[params.introduction.paragraph]]
+  text="""Back in 2015, I was elected as a Member of the [Apache Software Foundation](https://www.apache.org),
+  where I help with community outreach and the promotion of Open Source and _The Apache Way_, and committer and member
+  of the [Incubator](https://incubator.apache.org), Community Development, and
+  [Apache jclouds](https://jclouds.apache.org) project management committees.
+  """
+
+
+[[params.talks]]
+	[[params.talks.talk]]
+		name = "Next Generation Access Control for the Multi-Cloud World"
+		event = "Service Mesh Day San Francisco, 2019"
+		description  = """NGAC is a fundamental reworking of traditional access control into a form suited to the needs of
+		the modern, distributed, interconnected enterprise. NGAC is based on a flexible infrastructure that can provide
+		access control services for a number of different types of resources, accessed by a number of different types of
+		applications and users.
+		<br/>In this joint talk with [David Ferraiolo](https://www.nist.gov/people/david-ferraiolo) from [NIST](https://www.nist.gov/)
+		we introduced NGAC and did a live demo showing how it can be applied to augment traditional RBAC with high level
+		concepts xsuch as time and location in an efficient and scalable way.
+		"""
+		slides_link = "https://speakerdeck.com/nacx/next-generation-access-control-ngac-for-the-multi-cloud-world"
+		video_link = "https://www.youtube.com/watch?v=-4D8N0M-syA"
+
+ 	[[params.talks.talk]]
+		name = "Do you need a service mesh?"
+		event = "CodeMotion Madrid, 2018 (Spanish)"
+		slides_link = "https://speakerdeck.com/nacx/do-you-need-a-service-mesh"
+		video_link = "https://www.youtube.com/watch?v=1eBPwXC43eY"
+		description  = """In this talk I explored what a service mesh is and what they can do for your microservice web
+		backends. Are the claims of observability, resiliency, and WAF features real? Are they useful during development,
+		production, or both? Using pictures and demos, we’ll find out! This session also briefly covered how a service mesh
+		works, giving us a mental model with which to explore and evaluate after the talk.
+		"""
+
+	[[params.talks.talk]]
+		name = "Standalone Neutron: How we integrated it with Abiquo"
+		event = "OpenStack BCN 7th birthday meetup, 2017"
+		slides_link = "https://speakerdeck.com/nacx/standalone-neutron-how-we-integrated-it-with-abiquo"
+		description  = """This is a talk I gave at the OpenStack BCN 7th birthday meetup.<br/>
+		In it I explain how we integrated a standalone Neutron with Abiquo to implement an SDN solution without a full OpenStack deployment.
+		"""
+
+	[[params.talks.talk]]
+		name = "Rule the cloud with Apache jclouds"
+		event = "ApacheCon North America, 2016"
+		slides_link = "https://speakerdeck.com/nacx/rule-the-cloud-with-apache-jclouds"
+		description  = """Apache jclouds is an open source multi-cloud toolkit for the Java platform that gives you the freedom
+		to create applications that are portable across clouds while giving you full control to use cloud-specific features.<br/>
+		In this talk I explored the core concepts around jclouds and did a demo showing how the same code can be used to
+		manage your infrastructure in different cloud providers.
+		"""
+
+
+[[params.publications]]
+  year="2006"
+
+  [[params.publications.paper]]
+    name = "CIDEX: Intercambio distribuido de alertas para la gestión de ataques coordinados"
+    authors = "Joaquín García-Alfaro, __Ignasi Barrera__"
+    dest  = "Actas de la IX Reunión Española de Criptología y Seguridad de la Información"
+    link = "http://deic.uab.es/~joaquin/papers/recsi-cidex.pdf"
