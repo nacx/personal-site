@@ -1,6 +1,6 @@
 # Personal website
 
-This is my personal website, built with [Hugo](https://gohugo.io/) and the [Goa](https://github.com/shenoybr/hugo-goa) theme.
+This is my personal website, built with [Hugo](https://gohugo.io/).
 
 ## Rendering the site
 
