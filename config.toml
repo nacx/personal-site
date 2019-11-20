@@ -74,6 +74,8 @@ enableRobotsTXT = true
     possibilities especially designed for this new era of multi-cloud and hybrid architectures, and giving us a mental model
     with which to explore and evaluate after the talk."""
     slides_link = "https://speakerdeck.com/nacx/service-mesh-and-the-future-of-networking"
+    video_link = "https://www.youtube.com/watch?v=VmwLYxqaY0I"
+    
 	[[params.talks.talk]]
 		name = "Next Generation Access Control for the Multi-Cloud World"
 		event = "Service Mesh Day San Francisco, 2019"
