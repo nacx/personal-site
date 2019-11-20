@@ -75,7 +75,7 @@ enableRobotsTXT = true
     with which to explore and evaluate after the talk."""
     slides_link = "https://speakerdeck.com/nacx/service-mesh-and-the-future-of-networking"
     video_link = "https://www.youtube.com/watch?v=VmwLYxqaY0I"
-    
+
 	[[params.talks.talk]]
 		name = "Next Generation Access Control for the Multi-Cloud World"
 		event = "Service Mesh Day San Francisco, 2019"
@@ -119,6 +119,26 @@ enableRobotsTXT = true
 		manage your infrastructure in different cloud providers.
 		"""
 
+[[params.podcasts]]
+  [[params.podcasts.podcast]]
+    name = "How ‘Secure’ Your Cloud Native Can Be"
+    host = "The New Stack"
+    event = "KubeCon + CloudNativeCon NA, 2018"
+    description = """On this livestream from KubeCon + CloudNativeCon NA with [Liz Rice](https://twitter.com/lizrice) and
+    [Sarah Allen](https://twitter.com/ultrasaurus), we’re discussing the growing security focus at CNCF. In particular,
+    how the CNCF approached security in the past, and how is it continuing to focus on it in the future."""
+    link = "https://thenewstack.io/how-secure-cloud-native-deployments-can-be/"
+    audio_link = "https://soundcloud.com/thenewstackmakers/how-secure-your-cloud-native-can-be"
+    video_link = "https://www.youtube.com/watch?v=a894VoKB6e8"
+
+  [[params.podcasts.podcast]]
+    name = "Fundación Apache con Ignasi Barrera y el cumpleaños de TUX"
+    host = "Compilando Podcast"
+    event = "21st Tux anniversary, 2017 (Spanish)"
+    description = """On this edition of Compilando Podcast I am introducing the Apache Software Foundation and the main principles
+    behind the _Apache Way_ model, the framework used in the Foundation to create sustainable open source projects."""
+    link = "https://compilando.audio/index.php/2017/06/19/podcast-7-fundacion-apache-con-ignasi-barrera-y-el-cumpleanos-de-tux/"
+    audio_link = "http://media.blubrry.com/compilando/p/compilando.audio/wp-content/uploads/2017/06/podcast7.mp3"
 
 [[params.publications]]
   year="2006"

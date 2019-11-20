@@ -1,0 +1,42 @@
+<div class="introduction">
+	{{ with .Site.Params.podcasts }}
+	<h4>Podcasts</h4>
+	{{- range $index, $podcasts := $.Site.Params.podcasts -}}
+	<ul>
+		{{ range $elem_index, $podcast := $podcasts.podcast }}
+		<li>
+			{{ if $podcast.link }}
+			<p class="publications"> 
+				{{ if $podcast.host }}<strong>{{ $podcast.host }}</strong> - {{ end }}
+				<a href="{{ $podcast.link }}">{{ $podcast.name }}</a>
+			</p>
+			{{ else }}
+			<p class="publications"> {{ if $podcast.host }}<strong><em>({{ $podcast.host }})</em></strong>{{ end }}<strong>{{ $podcast.name }}</strong></p>
+			{{ end }}
+			<span class="collaborators">
+				<em>{{ $podcast.event | markdownify }}</em>
+			</span>
+
+			{{ with $podcast.description }}
+			<span class="collaborators">
+				{{ . | markdownify}}
+			</span>
+			{{ end }}
+
+			{{ if or ($podcast.audio_link) $podcast.video_link }}
+			<span class="code_blog">
+					{{ with $podcast.audio_link }}
+					[<a href="{{ $podcast.audio_link }}">audio</a>]
+					{{ end }}
+
+				{{ with $podcast.video_link }}
+				[<a href="{{ $podcast.video_link }}">video</a>]
+				{{ end }}
+			</span>
+			{{ end }}
+		</li>
+		{{ end }}
+	</ul>
+	{{- end -}}
+	{{- end -}}
+</div>
