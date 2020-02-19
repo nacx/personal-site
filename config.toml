@@ -71,7 +71,7 @@ enableRobotsTXT = true
     time-bounded access permissions.
     """
     slides_link = "https://speakerdeck.com/nacx/protecting-your-data-with-a-service-mesh"
-    #video_link = "https://www.youtube.com/watch?v=VmwLYxqaY0I"
+    video_link = "https://youtu.be/hQwtqjVN9xU?t=21823"
 
   [[params.talks.talk]]
     name = "Service Mesh and the future of networking"
