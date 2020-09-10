@@ -55,7 +55,7 @@ enableRobotsTXT = true
 [[params.introduction.paragraph]]
   text="""Back in 2015, I was elected as a Member of the [Apache Software Foundation](https://www.apache.org),
   where I help with community outreach and the promotion of Open Source and _The Apache Way_, and committer and member
-  of the [Incubator](https://incubator.apache.org), Community Development, and
+  of the [Incubator](https://incubator.apache.org), [Community Development](https://community.apache.org/), and
   [Apache jclouds](https://jclouds.apache.org) project management committees.
   """
 
