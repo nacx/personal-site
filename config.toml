@@ -62,6 +62,16 @@ enableRobotsTXT = true
 
 [[params.talks]]
   [[params.talks.talk]]
+    name = "Access Control for Microservices"
+    event = "Istio Weekly live stream"
+    description = """In this episode of the Istio Weekly live stream I present what is Next Generation Access Control (NGAC) and why it is a revolutionary technology
+    that is a perfect fit as an access control framework for micro-services. I explore the different components that build the NGAC architecture, deep dive
+    into its decision making process, and discuss how a Service Mesh can help leverage access control at scale.
+    """
+    slides_link = "https://speakerdeck.com/nacx/access-control-for-microservices"
+    video_link = "https://www.youtube.com/watch?v=ItpCGpYupQQ&t=496s"
+
+  [[params.talks.talk]]
     name = "Identity Provisioning in a Service Mesh"
     event = "DevSecOps and Zero Trust Architecture (ZTA) for Multi-Cloud Environments, NIST 2021"
     description = """In this talk given at the
@@ -73,7 +83,7 @@ enableRobotsTXT = true
     slides_link = "https://speakerdeck.com/nacx/identity-provisioning-in-a-service-mesh"
     video_link = "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/684682/uiconf_id/33598632/entry_id/1_yt1asfqe/embed/dynamic"
 
-[[params.talks.talk]]
+  [[params.talks.talk]]
     name = "Protecting your data with a Service Mesh"
     event = "Identity Management & Access Control in Multi-cloud, NIST 2020"
     description = """In this talk given at the
