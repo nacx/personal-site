@@ -69,7 +69,7 @@ enableRobotsTXT = true
     into its decision making process, and discuss how a Service Mesh can help leverage access control at scale.
     """
     slides_link = "https://speakerdeck.com/nacx/access-control-for-microservices"
-    video_link = "https://www.youtube.com/watch?v=ItpCGpYupQQ&t=496s"
+    video_link = "https://www.youtube.com/watch?v=ItpCGpYupQQ"
 
   [[params.talks.talk]]
     name = "Identity Provisioning in a Service Mesh"
