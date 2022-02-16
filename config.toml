@@ -62,8 +62,23 @@ enableRobotsTXT = true
 
 [[params.talks]]
   [[params.talks.talk]]
+    name = "Service Mesh as the Security Kernel for Zero Trust Platforms"
+    event = "Zero Trust Architecture and DevSecOps for Cloud-Native Applications, NIST 2022"
+    description = """In this talk given at the
+    [Zero Trust Architecture and DevSecOps for Cloud-Native Applications](https://www.nist.gov/news-events/events/2022/01/zta-and-devsecops-cloud-native-applications-virtual)
+    conference held at [NIST](https://www.nist.gov/), I am demonstrating how a Service Mesh can be used as a Security
+    Kernel to implement Zero Trust platforms. We will see how we can leverage distributed enforcement points to apply policy on the
+    user identity, how to enforce runtime identity as well, and how application targetted policies can be created to quickly
+    mitigate vulnerabilities like the `Log4Shell` one.  
+    The [demo](https://github.com/tetratelabs/nist-demo-2022) also shows the development of custom WASM-based policies that can leverage the entire feature set of the programming
+    language of choice to build rich access policies that can be enforced by the mesh.
+    """
+    code_link = "https://github.com/tetratelabs/nist-demo-2022"
+    video_link = "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/684682/uiconf_id/49375382/entry_id/1_lepgc6hr/embed/dynamic#t=01:17"
+
+[[params.talks.talk]]
     name = "Access Control for Microservices"
-    event = "Istio Weekly live stream"
+    event = "Istio Weekly live stream, 2021"
     description = """In this episode of the Istio Weekly live stream I present what is Next Generation Access Control (NGAC) and why it is a revolutionary technology
     that is a perfect fit as an access control framework for micro-services. I explore the different components that build the NGAC architecture, deep dive
     into its decision making process, and discuss how a Service Mesh can help leverage access control at scale.
@@ -103,55 +118,55 @@ enableRobotsTXT = true
     [Consul](https://www.consul.io/) have become very popular and people are starting to adopt them and figuring out
     the new possibilities these projects bring. But beyond the individual features each of those projects provide,
     in this talk, we will present the core concepts of a Service Mesh, the novel things this technology brings, and
-    the use cases it is meant to solve.
-    <br/>We will explore how Service Meshes will push networking to the next level, opening the door to a whole new set of
+    the use cases it is meant to solve.  
+    We will explore how Service Meshes will push networking to the next level, opening the door to a whole new set of
     possibilities especially designed for this new era of multi-cloud and hybrid architectures, and giving us a mental model
     with which to explore and evaluate after the talk."""
     slides_link = "https://speakerdeck.com/nacx/service-mesh-and-the-future-of-networking"
     video_link = "https://www.youtube.com/watch?v=VmwLYxqaY0I"
 
-	[[params.talks.talk]]
-		name = "Next Generation Access Control for the Multi-Cloud World"
-		event = "Service Mesh Day San Francisco, 2019"
-		description  = """NGAC is a fundamental reworking of traditional access control into a form suited to the needs of
-		the modern, distributed, interconnected enterprise. NGAC is based on a flexible infrastructure that can provide
-		access control services for a number of different types of resources, accessed by a number of different types of
-		applications and users.
-		<br/>In this joint talk with [David Ferraiolo](https://www.nist.gov/people/david-ferraiolo) from [NIST](https://www.nist.gov/)
-		we introduced NGAC and did a live demo showing how it can be applied to augment traditional RBAC with high level
-		concepts xsuch as time and location in an efficient and scalable way.
-		"""
-		slides_link = "https://speakerdeck.com/nacx/next-generation-access-control-ngac-for-the-multi-cloud-world"
-		video_link = "https://www.youtube.com/watch?v=-4D8N0M-syA"
+  [[params.talks.talk]]
+    name = "Next Generation Access Control for the Multi-Cloud World"
+    event = "Service Mesh Day San Francisco, 2019"
+    description  = """NGAC is a fundamental reworking of traditional access control into a form suited to the needs of
+    the modern, distributed, interconnected enterprise. NGAC is based on a flexible infrastructure that can provide
+    access control services for a number of different types of resources, accessed by a number of different types of
+    applications and users.  
+    In this joint talk with [David Ferraiolo](https://www.nist.gov/people/david-ferraiolo) from [NIST](https://www.nist.gov/)
+    we introduced NGAC and did a live demo showing how it can be applied to augment traditional RBAC with high level
+    concepts xsuch as time and location in an efficient and scalable way.
+    """
+    slides_link = "https://speakerdeck.com/nacx/next-generation-access-control-ngac-for-the-multi-cloud-world"
+    video_link = "https://www.youtube.com/watch?v=-4D8N0M-syA"
 
- 	[[params.talks.talk]]
-		name = "Do you need a service mesh?"
-		event = "CodeMotion Madrid, 2018 (Spanish)"
-		slides_link = "https://speakerdeck.com/nacx/do-you-need-a-service-mesh"
-		video_link = "https://www.youtube.com/watch?v=1eBPwXC43eY"
-		description  = """In this talk I explored what a service mesh is and what they can do for your microservice web
-		backends. Are the claims of observability, resiliency, and WAF features real? Are they useful during development,
-		production, or both? Using pictures and demos, we’ll find out! This session also briefly covered how a service mesh
-		works, giving us a mental model with which to explore and evaluate after the talk.
-		"""
+  [[params.talks.talk]]
+    name = "Do you need a service mesh?"
+    event = "CodeMotion Madrid, 2018 (Spanish)"
+    slides_link = "https://speakerdeck.com/nacx/do-you-need-a-service-mesh"
+    video_link = "https://www.youtube.com/watch?v=1eBPwXC43eY"
+    description  = """In this talk I explored what a service mesh is and what they can do for your microservice web
+    backends. Are the claims of observability, resiliency, and WAF features real? Are they useful during development,
+    production, or both? Using pictures and demos, we’ll find out! This session also briefly covered how a service mesh
+    works, giving us a mental model with which to explore and evaluate after the talk.
+    """
 
-	[[params.talks.talk]]
-		name = "Standalone Neutron: How we integrated it with Abiquo"
-		event = "OpenStack BCN 7th birthday meetup, 2017"
-		slides_link = "https://speakerdeck.com/nacx/standalone-neutron-how-we-integrated-it-with-abiquo"
-		description  = """This is a talk I gave at the OpenStack BCN 7th birthday meetup.<br/>
-		In it I explain how we integrated a standalone Neutron with Abiquo to implement an SDN solution without a full OpenStack deployment.
-		"""
+  [[params.talks.talk]]
+    name = "Standalone Neutron: How we integrated it with Abiquo"
+    event = "OpenStack BCN 7th birthday meetup, 2017"
+    slides_link = "https://speakerdeck.com/nacx/standalone-neutron-how-we-integrated-it-with-abiquo"
+    description  = """This is a talk I gave at the OpenStack BCN 7th birthday meetup.  
+    In it I explain how we integrated a standalone Neutron with Abiquo to implement an SDN solution without a full OpenStack deployment.
+    """
 
-	[[params.talks.talk]]
-		name = "Rule the cloud with Apache jclouds"
-		event = "ApacheCon North America, 2016"
-		slides_link = "https://speakerdeck.com/nacx/rule-the-cloud-with-apache-jclouds"
-		description  = """Apache jclouds is an open source multi-cloud toolkit for the Java platform that gives you the freedom
-		to create applications that are portable across clouds while giving you full control to use cloud-specific features.<br/>
-		In this talk I explored the core concepts around jclouds and did a demo showing how the same code can be used to
-		manage your infrastructure in different cloud providers.
-		"""
+  [[params.talks.talk]]
+    name = "Rule the cloud with Apache jclouds"
+    event = "ApacheCon North America, 2016"
+    slides_link = "https://speakerdeck.com/nacx/rule-the-cloud-with-apache-jclouds"
+    description  = """Apache jclouds is an open source multi-cloud toolkit for the Java platform that gives you the freedom
+    to create applications that are portable across clouds while giving you full control to use cloud-specific features.  
+    In this talk I explored the core concepts around jclouds and did a demo showing how the same code can be used to
+    manage your infrastructure in different cloud providers.
+    """
 
 [[params.podcasts]]
   [[params.podcasts.podcast]]

@@ -14,7 +14,7 @@
 				<em>{{ $talk.event | markdownify }}</em>
 			</span>
 
-			{{ if or ($talk.slides_link) $talk.video_link }}
+			{{ if or $talk.slides_link $talk.video_link $talk.code_link }}
 			<span class="code_blog">
 				{{ with $talk.video_link }}
 				[<a href="{{ $talk.video_link }}">video</a>]
@@ -22,6 +22,10 @@
 				
 				{{ with $talk.slides_link }}
 				[<a href="{{ $talk.slides_link }}">slides</a>]
+				{{ end }}
+				
+                                {{ with $talk.code_link }}
+				[<a href="{{ $talk.code_link }}">code</a>]
 				{{ end }}
 			</span>
 			{{ end }}
