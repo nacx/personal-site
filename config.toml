@@ -74,7 +74,7 @@ enableRobotsTXT = true
     language of choice to build rich access policies that can be enforced by the mesh.
     """
     code_link = "https://github.com/tetratelabs/nist-demo-2022"
-    video_link = "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/684682/uiconf_id/49375382/entry_id/1_lepgc6hr/embed/dynamic#t=01:17"
+    video_link = "https://www.youtube.com/watch?v=1-QPmJAH-p0&list=PLm51GPKRAmTk8hFMgR6w3g0tSR1mpYipc"
 
 [[params.talks.talk]]
     name = "Access Control for Microservices"
