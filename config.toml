@@ -59,6 +59,21 @@ enableRobotsTXT = true
   [Apache jclouds](https://jclouds.apache.org) project management committees.
   """
 
+[[params.talks]]
+  [[params.talks.talk]]
+    name = "The Role of NGAC and Service Mesh for Enterprise-wide Authorization"
+    event = "Zero Trust and High Assurance for Cloud Native Applications, NIST 2023"
+    description = """In this session at the
+    [4th Annual Multi-Cloud Conference](https://www.nist.gov/news-events/events/2023/05/4th-multi-cloud-conference-and-workshop)
+    conference held at [NIST](https://www.nist.gov/) co-presented with Zack Butcher, we
+    introduced the role of Next Generation Access Control (NGAC) and Service mesh for enterprise-wide Authorization.
+    We explained the fundamentals of NGAC and the main advantages it brings over traditional authorization systems like
+    RBAC or ABAC, and did a practical demo showing how _Policy as Code_ can be implemented for
+    enterprise-wide authorization at scale.
+    """
+    slides_link = "https://speakerdeck.com/nacx/next-gen-authorization"
+    video_link = "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/684682/uiconf_id/31013851/entry_id/1_g8q1tz1q/embed/dynamic#t=4:52:22"
+    demo_link = "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/684682/uiconf_id/31013851/entry_id/1_g8q1tz1q/embed/dynamic#t=5:19:07"
 
 [[params.talks]]
   [[params.talks.talk]]

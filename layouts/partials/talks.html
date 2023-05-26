@@ -20,11 +20,15 @@
 				[<a href="{{ $talk.video_link }}">video</a>]
 				{{ end }}
 				
+				{{ with $talk.demo_link }}
+				[<a href="{{ $talk.demo_link }}">demo</a>]
+				{{ end }}
+
 				{{ with $talk.slides_link }}
 				[<a href="{{ $talk.slides_link }}">slides</a>]
 				{{ end }}
 				
-                                {{ with $talk.code_link }}
+                {{ with $talk.code_link }}
 				[<a href="{{ $talk.code_link }}">code</a>]
 				{{ end }}
 			</span>
