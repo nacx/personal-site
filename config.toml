@@ -72,8 +72,8 @@ enableRobotsTXT = true
     enterprise-wide authorization at scale.
     """
     slides_link = "https://speakerdeck.com/nacx/next-gen-authorization"
-    video_link = "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/684682/uiconf_id/31013851/entry_id/1_g8q1tz1q/embed/dynamic#t=4:52:22"
-    demo_link = "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/684682/uiconf_id/31013851/entry_id/1_g8q1tz1q/embed/dynamic#t=5:19:07"
+    video_link = "https://www.youtube.com/watch?v=YZnJzCb72tQ"
+    demo_link = "https://www.youtube.com/watch?v=WQAX6Qt34Ic"
 
 [[params.talks]]
   [[params.talks.talk]]
