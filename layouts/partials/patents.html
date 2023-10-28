@@ -1,0 +1,32 @@
+<div class="introduction">
+	{{ with .Site.Params.patents }}
+        <section id="patents">
+	<h4>Patents</h4>
+	{{- range $index, $patents:= $.Site.Params.patents -}}
+	<ul>
+		{{ range $elem_index, $patent := $patents.patent }}
+		<li>
+			<p class="publications">
+                            <strong>
+                            <a href="{{ $patent.link }}">{{ $patent.number }}</a> -
+                            {{ $patent.name }}
+                            </strong>
+                            <em>({{ $patent.publication_date }})</em>
+			</p>
+			
+                        <span class="collaborators">
+                            <em>{{ $patent.inventors | markdownify }}</em>
+			</span>
+
+			{{ with $patent.description }}
+			<span class="project_description">
+				{{ . | markdownify}}
+			</span>
+			{{ end }}
+		</li>
+		{{ end }}
+	</ul>
+	{{- end -}}
+        </section>
+	{{- end -}}
+</div>

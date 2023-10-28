@@ -1,5 +1,6 @@
 <div class="introduction">
 	{{ with .Site.Params.talks }}
+        <section id="talks">
 	<h4>Talks</h4>
 	{{- range $index, $talks := $.Site.Params.talks -}}
 	<ul>
@@ -43,5 +44,6 @@
 		{{ end }}
 	</ul>
 	{{- end -}}
+        </section>
 	{{- end -}}
 </div>

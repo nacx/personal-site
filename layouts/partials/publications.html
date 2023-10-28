@@ -1,5 +1,6 @@
 <div class="introduction">
 	{{ with .Site.Params.publications }}
+        <section id="publications">
 	<h4>Publications</h4>
 
 	{{- range $index, $publications := $.Site.Params.publications -}}
@@ -42,5 +43,6 @@
 		{{ end }}
 	</ul>
 	{{- end -}}
+        </section>
 	{{- end -}}
 </div>

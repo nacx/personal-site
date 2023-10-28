@@ -49,7 +49,10 @@ enableRobotsTXT = true
    """
 [[params.introduction.paragraph]]
   text="""I am one of the founding engineers at [Tetrate](https://tetrate.io), currently building a Service Mesh platform
-  for the hybrid and multi-cloud world.
+  for the hybrid and multi-cloud world and leaiding the development of a modern security solution based on NGAC.  
+  NGAC (Next Generation Access Control) is a revolutionary security paradigm I am join researching with
+  [National Institute of Standards of Technology (NIST)](https://www.nist.gov/) to create a production-ready system that will
+  integrate with existing cloud native technologies.
   """
 
 [[params.introduction.paragraph]]
@@ -205,10 +208,37 @@ enableRobotsTXT = true
     audio_link = "http://media.blubrry.com/compilando/p/compilando.audio/wp-content/uploads/2017/06/podcast7.mp3"
 
 [[params.publications]]
-  year="2006"
+  year = "2006"
 
   [[params.publications.paper]]
     name = "CIDEX: Intercambio distribuido de alertas para la gestión de ataques coordinados"
     authors = "Joaquín García-Alfaro, __Ignasi Barrera__"
     dest  = "Actas de la IX Reunión Española de Criptología y Seguridad de la Información"
     link = "http://deic.uab.es/~joaquin/papers/recsi-cidex.pdf"
+
+
+[[params.patents]]
+  [[params.patents.patent]]
+    number = "US-20220156393-A1"
+    name = "Repeatable NGAC Policy Class Structure"
+    publication_date = "2022-05-19"
+    inventors = "Zack Daniel Butcher, San Francisco, CA (US); Ignacio Barrera Caparros, Barcelona (ES); Joshua Douglas Roberts, Ashburn, VA (US)"
+    link = "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20220156393"
+    description = """This patent defines a Policy Class structure that can be used to implement NGAC Policy Classes at scale.
+    Introducing new policy classes in a running NGAC system is challenging, as it is very easy to break access to objects that
+    had existing access control policies and start participating in the new Policy Classes. This Policy Class structure can
+    be used to safely introduce new Policy Classes and gradually migrate and add existing objects to them.
+    """
+
+  [[params.patents.patent]]
+    number = "US-20220159003-A1"
+    name = "NGAC Graph Evaluations"
+    publication_date = "2022-05-19"
+    inventors = "Zack Daniel Butcher, San Francisco, CA (US); Ignacio Barrera Caparros, Barcelona (ES); Joshua Douglas Roberts, Ashburn, VA (US)"
+    link = "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20220159003"
+    description = """This patent defines a technique to bind authenticated principals to a set of policy classes in a way
+    that allows evaluating all the policy classes in a single access decision. This technique establishes a set of patterns
+    that allow safely scaling the number of bindings and policy classes without compromising existing configurations.
+    """
+
+
