@@ -219,9 +219,20 @@ enableRobotsTXT = true
 
 [[params.patents]]
   [[params.patents.patent]]
+    number = "US-11811771-B2"
+    name = "NGAC Graph Evaluations"
+    publication_date = "2023-11-07"
+    inventors = "Zack Daniel Butcher, San Francisco, CA (US); Ignacio Barrera Caparros, Barcelona (ES); Joshua Douglas Roberts, Ashburn, VA (US)"
+    link = "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11811771"
+    description = """This patent defines a technique to bind authenticated principals to a set of policy classes in a way
+    that allows evaluating all the policy classes in a single access decision. This technique establishes a set of patterns
+    that allow safely scaling the number of bindings and policy classes without compromising existing configurations.
+    """
+  
+  [[params.patents.patent]]
     number = "US-20220156393-A1"
     name = "Repeatable NGAC Policy Class Structure"
-    publication_date = "2022-05-19"
+    publication_date = "2022-05-19, Provisional"
     inventors = "Zack Daniel Butcher, San Francisco, CA (US); Ignacio Barrera Caparros, Barcelona (ES); Joshua Douglas Roberts, Ashburn, VA (US)"
     link = "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20220156393"
     description = """This patent defines a Policy Class structure that can be used to implement NGAC Policy Classes at scale.
@@ -230,15 +241,6 @@ enableRobotsTXT = true
     be used to safely introduce new Policy Classes and gradually migrate and add existing objects to them.
     """
 
-  [[params.patents.patent]]
-    number = "US-20220159003-A1"
-    name = "NGAC Graph Evaluations"
-    publication_date = "2022-05-19"
-    inventors = "Zack Daniel Butcher, San Francisco, CA (US); Ignacio Barrera Caparros, Barcelona (ES); Joshua Douglas Roberts, Ashburn, VA (US)"
-    link = "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20220159003"
-    description = """This patent defines a technique to bind authenticated principals to a set of policy classes in a way
-    that allows evaluating all the policy classes in a single access decision. This technique establishes a set of patterns
-    that allow safely scaling the number of bindings and policy classes without compromising existing configurations.
-    """
+
 
 
