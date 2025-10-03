@@ -42,17 +42,17 @@ enableRobotsTXT = true
   url = "https://keybase.io/nacx"
 
 [[params.introduction.paragraph]]
-  text="""I am a researcher in cloud computing, virtualization and container technologies, and open source community
+  text="""I am a researcher in cloud computing, modern networking technologies and AI, and open source community
   contributor.
   My research interests revolve around distributed and highly concurrent systems, large cloud infrastructures, networking,
-  and security.
+  and security, and how to apply them so safely deliver AI at scale.
    """
 [[params.introduction.paragraph]]
-  text="""I am one of the founding engineers at [Tetrate](https://tetrate.io), currently building a Service Mesh platform
-  for the hybrid and multi-cloud world and leaiding the development of a modern security solution based on NGAC.  
-  NGAC (Next Generation Access Control) is a revolutionary security paradigm I am join researching with
+  text="""I am one of the founding engineers at [Tetrate](https://tetrate.io), currently building platform that delivers AI
+  and API at scale. I'm also and leading the development of a modern security solution based on NGAC (Next Generation Access
+  Control), a revolutionary security paradigm I am join researching with
   [National Institute of Standards of Technology (NIST)](https://www.nist.gov/) to create a production-ready system that will
-  integrate with existing cloud native technologies.
+  integrate with existing cloud native and AI technologies.
   """
 
 [[params.introduction.paragraph]]
@@ -63,6 +63,20 @@ enableRobotsTXT = true
   """
 
 [[params.talks]]
+  [[params.talks.talk]]
+    name = "Do you need an AI Gateway?"
+    event = "MCP Dev Summit Europe, London 2025"
+    description = """LLM applications increasingly rely on MCP servers for tools, data, and automation,
+    but teams often hit real-world snags: trusted server discovery, inconsistent authentication, lack of
+    built-in security features, unreliability of tool calls, tool pollution, lack of proper observability, etc.
+    All these issues have a significant impact on the developer experience and make it hard to properly
+    operationalize MCP for real-world production environments.  
+    In this talk, I frame these pain points from a developer and platform persona angles, and discuss how an
+    MCP gateway can help address them and provide a solid foundation to leverage MCP at scale in enterprise environments.
+    """
+    slides_link = "https://speakerdeck.com/nacx/do-you-need-an-ai-gateway"
+    video_link = "https://www.youtube.com/watch?v=3KneEblEK34&list=PLjULwdJUtFdgXBtIvjwhTDuooBUz0y1xJ&t=2483s"
+
   [[params.talks.talk]]
     name = "The Role of NGAC and Service Mesh for Enterprise-wide Authorization"
     event = "Zero Trust and High Assurance for Cloud Native Applications, NIST 2023"
