@@ -75,7 +75,7 @@ enableRobotsTXT = true
     MCP gateway can help address them and provide a solid foundation to leverage MCP at scale in enterprise environments.
     """
     slides_link = "https://speakerdeck.com/nacx/do-you-need-an-ai-gateway"
-    video_link = "https://www.youtube.com/watch?v=3KneEblEK34&list=PLjULwdJUtFdgXBtIvjwhTDuooBUz0y1xJ&t=2483s"
+    video_link = "https://www.youtube.com/watch?v=JBeHnvunf2M"
 
   [[params.talks.talk]]
     name = "The Role of NGAC and Service Mesh for Enterprise-wide Authorization"
@@ -225,10 +225,17 @@ enableRobotsTXT = true
   year = "2006"
 
   [[params.publications.paper]]
-    name = "CIDEX: Intercambio distribuido de alertas para la gestión de ataques coordinados"
+    name = "Distributed Exchange of Alerts for the Detection of Coordinated Attacks"
     authors = "Joaquín García-Alfaro, __Ignasi Barrera__"
-    dest  = "Actas de la IX Reunión Española de Criptología y Seguridad de la Información"
-    link = "http://deic.uab.es/~joaquin/papers/recsi-cidex.pdf"
+    description = """Attacks and intrusions to information systems cause large revenue losses. The prevention of these attacks is not
+    always possible by just considering information from isolated sources of the network. A global view of the
+    whole system is necessary to react against the different actions of such an attack. The design and deployment of
+    a decentralized system targeted at detecting as well as reacting to information system attacks might benefit from
+    the use of the publish/subscribe model. In this paper, we discuss the advantages and convenience in using this communication paradigm for a general decentralized attack
+    prevention framework and overview the design and implementation of our approach by using a combination of two
+    different publish/subscribe middleware products. Furthermore, we present a quantitative evaluation of our approach.
+    """
+    link = "cnsr08-rss.pdf"
 
 
 [[params.patents]]

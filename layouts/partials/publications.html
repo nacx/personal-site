@@ -15,8 +15,14 @@
 			<p class="publications"> {{ $publication.name }},</p>
 			{{ end }}
 			<span class="collaborators">
-				In <em>{{ $publication.dest | markdownify }}</em>.
+				<em>{{ $publication.authors | markdownify }}</em>
 			</span>
+			
+			{{ with $publication.description }}
+			<span class="project_description">
+				{{ . | markdownify}}
+			</span>
+			{{ end }}
 
 			{{ if or ($publication.code_link) $publication.blog_link }}
 			<span class="code_blog">
@@ -27,16 +33,6 @@
 				{{ with $publication.blog_link }}
 				[<a href="{{ $publication.blog_link }}">blog</a>]
 				{{ end }}
-			</span>
-			{{ end }}
-
-			<span class="collaborators">
-				{{ $publication.authors | markdownify }}
-			</span>
-
-			{{ with $publication.description }}
-			<span class="project_description">
-				{{ . | markdownify}}
 			</span>
 			{{ end }}
 		</li>

@@ -7,15 +7,15 @@
 		{{ range $elem_index, $patent := $patents.patent }}
 		<li>
 			<p class="publications">
-                            <strong>
-                            <a href="{{ $patent.link }}">{{ $patent.number }}</a> -
-                            {{ $patent.name }}
-                            </strong>
-                            <em>({{ $patent.publication_date }})</em>
+            	<strong>
+					<a href="{{ $patent.link }}">{{ $patent.number }}</a> -
+					{{ $patent.name }}
+				</strong>
+				<em>({{ $patent.publication_date }})</em>
 			</p>
 			
-                        <span class="collaborators">
-                            <em>{{ $patent.inventors | markdownify }}</em>
+			<span class="collaborators">
+				<em>{{ $patent.inventors | markdownify }}</em>
 			</span>
 
 			{{ with $patent.description }}
