@@ -72,6 +72,7 @@ enableRobotsTXT = true
     the software development lifecycle, and how changing how you work with AI is as important as what you decide to do with AI.
     """
     slides_link = "https://speakerdeck.com/nacx/rescue-agents-from-prototype-purgatory-operationalize-agent-readiness"
+    video_link = "https://www.youtube.com/watch?v=6nxGgzi4uuE"
 
   [[params.talks.talk]]
     name = "Do you need an AI Gateway?"
