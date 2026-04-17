@@ -1,4 +1,4 @@
-import { defineConfig, envField, fontProviders } from "astro/config";
+import { defineConfig, envField, fontProviders, passthroughImageService } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
@@ -6,6 +6,7 @@ import { SITE } from "./src/config";
 export default defineConfig({
   site: SITE.website,
   base: "/",
+  image: { service: passthroughImageService() },
   integrations: [sitemap()],
   vite: {
     // @ts-ignore - Vite version mismatch between tailwindcss and astro (https://github.com/withastro/astro/issues/14030)
