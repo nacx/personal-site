@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import SectionItem from "@/components/SectionItem.astro";
+import { SITE } from "@/config";
+
+const talks = (await getCollection("talks")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<Layout title={`Talks | ${SITE.title}`} description="Conferences, workshops and meetup presentations.">
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section class="pt-8 pb-6 border-b border-border">
+      <h1 class="text-3xl font-bold sm:text-4xl">Talks</h1>
+      <p class="mt-2 opacity-60">Conferences, workshops and meetup presentations.</p>
+    </section>
+    <section class="pt-8 pb-12">
+      <ul>
+        {talks.map(talk => (
+          <SectionItem
+            title={talk.data.title}
+            href={`/talks/${talk.id}`}
+            subtitle={talk.data.event}
+            description={talk.data.description}
+          />
+        ))}
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</Layout>

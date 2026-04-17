@@ -1,0 +1,25 @@
+---
+type Props = {
+  title: string;
+  href: string;
+  subtitle?: string;
+  description: string;
+};
+
+const { title, href, subtitle, description } = Astro.props;
+---
+
+<li class="my-6">
+  <a
+    href={href}
+    class:list={[
+      "inline-block text-lg font-medium text-accent",
+      "decoration-dashed underline-offset-4 hover:underline",
+      "focus-visible:no-underline focus-visible:underline-offset-0",
+    ]}
+  >
+    {title}
+  </a>
+  {subtitle && <p class="text-sm opacity-60">{subtitle}</p>}
+  <p class="mt-1 line-clamp-2">{description}</p>
+</li>

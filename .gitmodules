@@ -2,6 +2,3 @@
 	path = public
 	url = git@github.com:nacx/nacx.github.io.git
 	branch = master
-[submodule "themes/avicenna"]
-	path = themes/avicenna
-	url = https://github.com/hadisinaee/avicenna.git

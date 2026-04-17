@@ -1,0 +1,114 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import BackButton from "@/components/BackButton.astro";
+import { SITE } from "@/config";
+import { extractYouTubeId } from "@/utils/youtube";
+
+export async function getStaticPaths() {
+  const talks = await getCollection("talks");
+  return talks.map(talk => ({ params: { id: talk.id }, props: { talk } }));
+}
+
+const { talk } = Astro.props;
+const { title, event, date, description, slidesLink, videoLink, codeLink, demoLink } = talk.data;
+const { Content } = await render(talk);
+
+const youtubeId = videoLink ? extractYouTubeId(videoLink) : null;
+const isYouTube = youtubeId !== null;
+
+const formattedDate = date.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+});
+---
+
+<Layout title={`${title} | ${SITE.title}`} description={description}>
+  <Header />
+  <BackButton />
+  <main id="main-content" class="app-layout pb-12">
+    <h1 class="text-2xl font-bold text-accent sm:text-3xl mt-4">{title}</h1>
+    <p class="mt-2 opacity-60 text-sm">{event} &mdash; {formattedDate}</p>
+
+    <!-- Links -->
+    <div class="mt-4 flex flex-wrap gap-3">
+      {slidesLink && (
+        <a
+          href={slidesLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm border border-border rounded px-3 py-1 hover:text-accent hover:border-accent transition-colors"
+        >
+          Slides
+        </a>
+      )}
+      {videoLink && (
+        <a
+          href={videoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm border border-border rounded px-3 py-1 hover:text-accent hover:border-accent transition-colors"
+        >
+          Video
+        </a>
+      )}
+      {codeLink && (
+        <a
+          href={codeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm border border-border rounded px-3 py-1 hover:text-accent hover:border-accent transition-colors"
+        >
+          Code
+        </a>
+      )}
+      {demoLink && (
+        <a
+          href={demoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm border border-border rounded px-3 py-1 hover:text-accent hover:border-accent transition-colors"
+        >
+          Demo
+        </a>
+      )}
+    </div>
+
+    <!-- YouTube embed -->
+    {isYouTube && (
+      <div class="mt-8 aspect-video w-full">
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full rounded-lg"
+        ></iframe>
+      </div>
+    )}
+
+    <!-- Non-YouTube video link fallback -->
+    {videoLink && !isYouTube && (
+      <div class="mt-8 p-4 border border-border rounded-lg">
+        <p class="opacity-60 text-sm mb-2">Watch the recording:</p>
+        <a
+          href={videoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent hover:underline underline-offset-4"
+        >
+          {videoLink}
+        </a>
+      </div>
+    )}
+
+    <!-- Description / body content -->
+    <article class="app-prose mt-8 w-full max-w-app">
+      <p>{description}</p>
+      <Content />
+    </article>
+  </main>
+  <Footer />
+</Layout>

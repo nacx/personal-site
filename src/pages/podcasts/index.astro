@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import SectionItem from "@/components/SectionItem.astro";
+import { SITE } from "@/config";
+
+const podcasts = (await getCollection("podcasts")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<Layout title={`Podcasts | ${SITE.title}`} description="Podcast appearances and recorded interviews.">
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section class="pt-8 pb-6 border-b border-border">
+      <h1 class="text-3xl font-bold sm:text-4xl">Podcasts</h1>
+      <p class="mt-2 opacity-60">Podcast appearances and recorded interviews.</p>
+    </section>
+    <section class="pt-8 pb-12">
+      <ul>
+        {podcasts.map(podcast => (
+          <SectionItem
+            title={podcast.data.title}
+            href={`/podcasts/${podcast.id}`}
+            subtitle={`${podcast.data.host}${podcast.data.event ? ` · ${podcast.data.event}` : ""}`}
+            description={podcast.data.description}
+          />
+        ))}
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</Layout>

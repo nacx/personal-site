@@ -1,0 +1,167 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Socials from "@/components/Socials.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import SectionItem from "@/components/SectionItem.astro";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import { SECTIONS_PER_INDEX } from "@/config";
+import { SOCIALS } from "@/constants";
+
+const talks = (await getCollection("talks")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const patents = (await getCollection("patents")).sort(
+  (a, b) =>
+    b.data.publicationDate.getTime() - a.data.publicationDate.getTime()
+);
+const publications = await getCollection("publications");
+const podcasts = (await getCollection("podcasts")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<Layout>
+  <Header />
+  <main id="main-content" data-layout="index" class="app-layout">
+
+    <!-- Bio -->
+    <section id="hero" class="pt-8 pb-6 border-b border-border">
+      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+        Ignasi Barrera
+      </h1>
+      <p class="text-lg opacity-70 mb-4">Software Engineer. Open Source contributor.</p>
+
+      <div class="prose dark:prose-invert max-w-none space-y-3">
+        <p>
+          I am a researcher in cloud computing, modern networking technologies and AI, and an open source community contributor.
+          My research interests revolve around distributed and highly concurrent systems, large cloud infrastructures, networking, and security,
+          and how to apply them to safely deliver AI at scale.
+        </p>
+        <p>
+          I am one of the founding engineers at <a href="https://tetrate.io" class="text-accent hover:underline underline-offset-4">Tetrate</a>, currently building a platform that delivers AI and API at scale.
+          I'm also leading the development of a modern security solution based on NGAC (Next Generation Access Control).
+          NGAC is a revolutionary security paradigm developed by the <a href="https://www.nist.gov/" class="text-accent hover:underline underline-offset-4">National Institute of Standards of Technology (NIST)</a>
+          that I am jointly researching with them to create a production-ready system that will integrate with existing cloud native and AI technologies.
+        </p>
+        <p>
+          Back in 2015, I was elected as a Member of the <a href="https://www.apache.org" class="text-accent hover:underline underline-offset-4">Apache Software Foundation</a>,
+          where I assist with community outreach and the promotion of Open Source and <em>The Apache Way</em>.
+          Additionally, I serve as a committer and member of the <a href="https://incubator.apache.org" class="text-accent hover:underline underline-offset-4">Incubator</a> and
+          <a href="https://community.apache.org/" class="text-accent hover:underline underline-offset-4">Community Development</a> project management committees.
+        </p>
+      </div>
+
+      {
+        SOCIALS.length > 0 && (
+          <div class="mt-6 flex max-sm:flex-col sm:items-center">
+            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Find me on:</div>
+            <Socials />
+          </div>
+        )
+      }
+    </section>
+
+    <!-- Talks -->
+    <section id="talks" class="pt-12 pb-6 border-b border-border">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-2xl font-semibold tracking-wide">Talks</h2>
+        <LinkButton href="/talks" class="text-sm underline decoration-dashed underline-offset-4 hover:text-accent">
+          View all
+          <IconArrowRight class="inline-block rtl:-rotate-180" />
+        </LinkButton>
+      </div>
+      <p class="opacity-60 mt-1">Conferences, workshops and meetup presentations.</p>
+      <ul>
+        {talks.slice(0, SECTIONS_PER_INDEX).map(talk => (
+          <SectionItem
+            title={talk.data.title}
+            href={`/talks/${talk.id}`}
+            subtitle={talk.data.event}
+            description={talk.data.description}
+          />
+        ))}
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="pt-12 pb-6 border-b border-border">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-2xl font-semibold tracking-wide">Publications</h2>
+        <LinkButton href="/publications" class="text-sm underline decoration-dashed underline-offset-4 hover:text-accent">
+          View all
+          <IconArrowRight class="inline-block rtl:-rotate-180" />
+        </LinkButton>
+      </div>
+      <p class="opacity-60 mt-1">Academic papers and research publications.</p>
+      <ul>
+        {publications.slice(0, SECTIONS_PER_INDEX).map(pub => (
+          <SectionItem
+            title={pub.data.title}
+            href={`/publications/${pub.id}`}
+            subtitle={pub.data.authors}
+            description={pub.data.description}
+          />
+        ))}
+      </ul>
+    </section>
+
+    <!-- Patents -->
+    <section id="patents" class="pt-12 pb-6 border-b border-border">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-2xl font-semibold tracking-wide">Patents</h2>
+        <LinkButton href="/patents" class="text-sm underline decoration-dashed underline-offset-4 hover:text-accent">
+          View all
+          <IconArrowRight class="inline-block rtl:-rotate-180" />
+        </LinkButton>
+      </div>
+      <p class="opacity-60 mt-1">Issued and pending patents.</p>
+      <ul>
+        {patents.slice(0, SECTIONS_PER_INDEX).map(patent => (
+          <SectionItem
+            title={patent.data.title}
+            href={`/patents/${patent.id}`}
+            subtitle={`${patent.data.number} · ${patent.data.publicationDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}`}
+            description={patent.data.description}
+          />
+        ))}
+      </ul>
+    </section>
+
+    <!-- Podcasts -->
+    <section id="podcasts" class="pt-12 pb-6">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-2xl font-semibold tracking-wide">Podcasts</h2>
+        <LinkButton href="/podcasts" class="text-sm underline decoration-dashed underline-offset-4 hover:text-accent">
+          View all
+          <IconArrowRight class="inline-block rtl:-rotate-180" />
+        </LinkButton>
+      </div>
+      <p class="opacity-60 mt-1">Podcast appearances and recorded interviews.</p>
+      <ul>
+        {podcasts.slice(0, SECTIONS_PER_INDEX).map(podcast => (
+          <SectionItem
+            title={podcast.data.title}
+            href={`/podcasts/${podcast.id}`}
+            subtitle={`${podcast.data.host}${podcast.data.event ? ` · ${podcast.data.event}` : ""}`}
+            description={podcast.data.description}
+          />
+        ))}
+      </ul>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset?.layout;
+    if (indexLayout) {
+      sessionStorage.setItem("backUrl", "/");
+    }
+  });
+</script>

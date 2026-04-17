@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import SectionItem from "@/components/SectionItem.astro";
+import { SITE } from "@/config";
+
+const patents = (await getCollection("patents")).sort(
+  (a, b) =>
+    b.data.publicationDate.getTime() - a.data.publicationDate.getTime()
+);
+---
+
+<Layout title={`Patents | ${SITE.title}`} description="Issued and pending patents.">
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section class="pt-8 pb-6 border-b border-border">
+      <h1 class="text-3xl font-bold sm:text-4xl">Patents</h1>
+      <p class="mt-2 opacity-60">Issued and pending patents.</p>
+    </section>
+    <section class="pt-8 pb-12">
+      <ul>
+        {patents.map(patent => (
+          <SectionItem
+            title={patent.data.title}
+            href={`/patents/${patent.id}`}
+            subtitle={`${patent.data.number} · ${patent.data.publicationDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}`}
+            description={patent.data.description}
+          />
+        ))}
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</Layout>

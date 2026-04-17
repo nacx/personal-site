@@ -1,0 +1,65 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import BackButton from "@/components/BackButton.astro";
+import { SITE } from "@/config";
+
+export async function getStaticPaths() {
+  const publications = await getCollection("publications");
+  return publications.map(pub => ({ params: { id: pub.id }, props: { pub } }));
+}
+
+const { pub } = Astro.props;
+const { title, authors, year, description, link, codeLink, blogLink } = pub.data;
+const { Content } = await render(pub);
+---
+
+<Layout title={`${title} | ${SITE.title}`} description={description}>
+  <Header />
+  <BackButton />
+  <main id="main-content" class="app-layout pb-12">
+    <h1 class="text-2xl font-bold text-accent sm:text-3xl mt-4">{title}</h1>
+    <p class="mt-2 opacity-60 text-sm">{authors} &mdash; {year}</p>
+
+    <div class="mt-4 flex flex-wrap gap-3">
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm border border-border rounded px-3 py-1 hover:text-accent hover:border-accent transition-colors"
+        >
+          PDF / Paper
+        </a>
+      )}
+      {codeLink && (
+        <a
+          href={codeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm border border-border rounded px-3 py-1 hover:text-accent hover:border-accent transition-colors"
+        >
+          Code
+        </a>
+      )}
+      {blogLink && (
+        <a
+          href={blogLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm border border-border rounded px-3 py-1 hover:text-accent hover:border-accent transition-colors"
+        >
+          Blog Post
+        </a>
+      )}
+    </div>
+
+    <article class="app-prose mt-8 w-full max-w-app">
+      <p>{description}</p>
+      <Content />
+    </article>
+  </main>
+  <Footer />
+</Layout>

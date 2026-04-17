@@ -1,29 +1,40 @@
 # Personal website
 
-This is my personal website, built with [Hugo](https://gohugo.io/).
+My personal website at [nacx.dev](https://nacx.dev), built with [Astro](https://astro.build/) and the [AstroPaper](https://astro-paper.pages.dev/) theme.
 
-## Rendering the site
+## Development
 
-Make sure you have Hugo installed:
-
-```bash
-brew install hugo
-```
-
-Then you can build the site with:
+Install dependencies:
 
 ```bash
-make dev
+npm install
 ```
 
-Now open `https://localhost:1313` in your browser. Any changes you make to the website source will be immediately
-reflected, and auto-reloaded, in your browser.
-
-# Publish the site
-
-The site can be easily published to GitHub pages as follows:
+Start the dev server:
 
 ```bash
-make publish
+npm run dev
 ```
 
+Open `http://localhost:4321` in your browser. Changes are hot-reloaded automatically.
+
+## Content
+
+All content lives in `src/data/` as Markdown files with frontmatter:
+
+| Section | Directory |
+|---------|-----------|
+| Talks | `src/data/talks/` |
+| Publications | `src/data/publications/` |
+| Patents | `src/data/patents/` |
+| Podcasts | `src/data/podcasts/` |
+
+## Build
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The site deploys automatically to GitHub Pages via GitHub Actions on every push to `master`.
