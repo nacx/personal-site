@@ -76,6 +76,10 @@ const formattedDate = date.toLocaleDateString("en-US", {
       )}
     </div>
 
+    <article class="app-prose mt-8 w-full max-w-app">
+      <Content />
+    </article>
+
     <!-- YouTube embed -->
     {isYouTube && (
       <div class="mt-8 aspect-video w-full">
@@ -102,9 +106,6 @@ const formattedDate = date.toLocaleDateString("en-US", {
       </div>
     )}
 
-    <article class="app-prose mt-8 w-full max-w-app">
-      <Content />
-    </article>
   </main>
   <Footer />
 </Layout>

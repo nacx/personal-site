@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { patent } = Astro.props;
-const { title, number, publicationDate, inventors, link, description } = patent.data;
+const { title, number, publicationDate, inventors, link, embedLink, description } = patent.data;
 const { Content } = await render(patent);
 
 const formattedDate = publicationDate.toLocaleDateString("en-US", {
@@ -44,6 +44,15 @@ const formattedDate = publicationDate.toLocaleDateString("en-US", {
     <article class="app-prose mt-8 w-full max-w-app">
       <Content />
     </article>
+
+    <div class="mt-8 w-full h-[80vh]">
+      <iframe
+        src={embedLink}
+        title={title}
+        class="w-full h-full"
+      ></iframe>
+    </div>
+
   </main>
   <Footer />
 </Layout>

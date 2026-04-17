@@ -5,6 +5,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import BackButton from "@/components/BackButton.astro";
 import { SITE } from "@/config";
+import { extractYouTubeId } from "@/utils/youtube";
 
 export async function getStaticPaths() {
   const podcasts = await getCollection("podcasts");
@@ -14,6 +15,9 @@ export async function getStaticPaths() {
 const { podcast } = Astro.props;
 const { title, host, event, date, description, link, audioLink, videoLink } = podcast.data;
 const { Content } = await render(podcast);
+
+const youtubeId = videoLink ? extractYouTubeId(videoLink) : null;
+const isYouTube = youtubeId !== null;
 
 const formattedDate = date.toLocaleDateString("en-US", {
   year: "numeric",
@@ -64,6 +68,32 @@ const formattedDate = date.toLocaleDateString("en-US", {
     <article class="app-prose mt-8 w-full max-w-app">
       <Content />
     </article>
+
+    <!-- YouTube embed -->
+    {isYouTube && (
+      <div class="mt-8 aspect-video w-full">
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full rounded-lg"
+        ></iframe>
+      </div>
+    )}
+
+    <!-- Non-YouTube video link fallback -->
+    {videoLink && !isYouTube && (
+      <div class="mt-8 aspect-video w-full">
+        <iframe
+          src={videoLink}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full rounded-lg"
+        ></iframe>
+      </div>
+    )}
   </main>
   <Footer />
 </Layout>

@@ -28,6 +28,7 @@ const patents = defineCollection({
     publicationDate: z.coerce.date(),
     inventors: z.string(),
     link: z.string(),
+    embedLink: z.string().optional(),
     description: z.string(),
   }),
 });

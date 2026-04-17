@@ -59,6 +59,14 @@ const { Content } = await render(pub);
     <article class="app-prose mt-8 w-full max-w-app">
       <Content />
     </article>
+
+    <div class="mt-8 w-full h-[80vh]">
+      <iframe
+        src={link}
+        title={title}
+        class="w-full h-full"
+      ></iframe>
+    </div>
   </main>
   <Footer />
 </Layout>

@@ -4,6 +4,7 @@ number: "US-11811771-B2"
 publicationDate: 2023-11-07
 inventors: "Zack Daniel Butcher, San Francisco, CA (US); Ignacio Barrera Caparros, Barcelona (ES); Joshua Douglas Roberts, Ashburn, VA (US)"
 link: "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11811771"
+embedLink: "/US-11811771-B2.pdf"
 description: "A technique to bind authenticated principals to policy classes allowing all policy classes to be evaluated in a single access decision."
 ---
 
