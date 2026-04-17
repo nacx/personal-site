@@ -5,7 +5,6 @@ import { SITE } from "./src/config";
 
 export default defineConfig({
   site: SITE.website,
-  base: "/",
   image: { service: passthroughImageService() },
   integrations: [sitemap()],
   vite: {
