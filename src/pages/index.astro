@@ -7,7 +7,7 @@ import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import SectionItem from "@/components/SectionItem.astro";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import { SECTIONS_PER_INDEX } from "@/config";
+import { SITE, SECTIONS_PER_INDEX } from "@/config";
 import { SOCIALS } from "@/constants";
 
 const talks = (await getCollection("talks")).sort(
@@ -34,8 +34,8 @@ const podcasts = (await getCollection("podcasts")).sort(
         alt="Ignasi Barrera"
         class="w-40 h-40 rounded-full object-cover border-2 border-accent"
       />
-      <h1 class="text-3xl font-bold sm:text-4xl">Ignasi Barrera</h1>
-      <p class="text-base opacity-70">Software Engineer. Open Source contributor.</p>
+      <h1 class="text-3xl font-bold sm:text-4xl">{SITE.author}</h1>
+      <p class="text-base opacity-70">{SITE.desc}</p>
       {
         SOCIALS.length > 0 && (
           <div class="flex items-center gap-1">

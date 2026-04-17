@@ -2,7 +2,7 @@ export const SITE = {
   website: "https://nacx.dev/",
   author: "Ignasi Barrera",
   profile: "https://nacx.dev/",
-  desc: "Software Engineer. Open Source contributor.",
+  desc: "AI geek & open source lover",
   title: "Ignasi Barrera",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: false,

@@ -1,0 +1,42 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import IconGitHub from "@/assets/icons/IconGitHub.svg";
+import { SITE } from "@/config";
+import { PROJECTS } from "@/data/projects";
+---
+
+<Layout title={`Projects | ${SITE.title}`} description="Open source projects I maintain or contribute to.">
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section class="pt-8 pb-6 border-b border-border">
+      <h1 class="text-3xl font-bold sm:text-4xl">Projects</h1>
+      <p class="mt-2 opacity-60">Open source projects I maintain or contribute to.</p>
+    </section>
+    <section class="pt-8 pb-12">
+      <ul>
+        {PROJECTS.map(project => (
+          <li class="my-6 flex items-start gap-4">
+            <IconGitHub class="mt-1 size-5 shrink-0 opacity-50" />
+            <div>
+              <div class="flex items-baseline gap-3">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-lg font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
+                >
+                  {project.name}
+                </a>
+                <span class="text-xs border border-border rounded px-1.5 py-0.5 opacity-60">{project.role}</span>
+              </div>
+              <p class="mt-1 opacity-80">{project.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</Layout>
