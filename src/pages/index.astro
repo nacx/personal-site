@@ -25,9 +25,27 @@ const podcasts = (await getCollection("podcasts")).sort(
 
 <Layout>
   <Header />
-  <main id="main-content" data-layout="index" class="app-layout">
+  <main id="main-content" class="app-layout">
 
-    <!-- Bio -->
+    <!-- Headshot -->
+    <section id="hero" class="pt-8 pb-6 border-b border-border flex flex-col items-center gap-3 [&>img]:mb-2">
+      <img
+        src="/img/headshot.png"
+        alt="Ignasi Barrera"
+        class="w-40 h-40 rounded-full object-cover border-2 border-accent"
+      />
+      <h1 class="text-3xl font-bold sm:text-4xl">Ignasi Barrera</h1>
+      <p class="text-base opacity-70">Software Engineer. Open Source contributor.</p>
+      {
+        SOCIALS.length > 0 && (
+          <div class="flex items-center gap-1">
+            <Socials />
+          </div>
+        )
+      }
+    </section>
+
+    <!--
     <section id="hero" class="pt-8 pb-6 border-b border-border">
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
         Ignasi Barrera
@@ -63,6 +81,7 @@ const podcasts = (await getCollection("podcasts")).sort(
         )
       }
     </section>
+    -->
 
     <!-- Talks -->
     <section id="talks" class="pt-12 pb-6 border-b border-border">
@@ -86,29 +105,7 @@ const podcasts = (await getCollection("podcasts")).sort(
       </ul>
     </section>
 
-    <!-- Publications -->
-    <section id="publications" class="pt-12 pb-6 border-b border-border">
-      <div class="flex items-baseline justify-between">
-        <h2 class="text-2xl font-semibold tracking-wide">Publications</h2>
-        <LinkButton href="/publications" class="text-sm underline decoration-dashed underline-offset-4 hover:text-accent">
-          View all
-          <IconArrowRight class="inline-block rtl:-rotate-180" />
-        </LinkButton>
-      </div>
-      <p class="opacity-60 mt-1">Academic papers and research publications.</p>
-      <ul>
-        {publications.slice(0, SECTIONS_PER_INDEX).map(pub => (
-          <SectionItem
-            title={pub.data.title}
-            href={`/publications/${pub.id}`}
-            subtitle={pub.data.authors}
-            description={pub.data.description}
-          />
-        ))}
-      </ul>
-    </section>
-
-    <!-- Patents -->
+        <!-- Patents -->
     <section id="patents" class="pt-12 pb-6 border-b border-border">
       <div class="flex items-baseline justify-between">
         <h2 class="text-2xl font-semibold tracking-wide">Patents</h2>
@@ -152,16 +149,29 @@ const podcasts = (await getCollection("podcasts")).sort(
       </ul>
     </section>
 
+    <!-- Publications -->
+    <section id="publications" class="pt-12 pb-6 border-b border-border">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-2xl font-semibold tracking-wide">Publications</h2>
+        <LinkButton href="/publications" class="text-sm underline decoration-dashed underline-offset-4 hover:text-accent">
+          View all
+          <IconArrowRight class="inline-block rtl:-rotate-180" />
+        </LinkButton>
+      </div>
+      <p class="opacity-60 mt-1">Academic papers and research publications.</p>
+      <ul>
+        {publications.slice(0, SECTIONS_PER_INDEX).map(pub => (
+          <SectionItem
+            title={pub.data.title}
+            href={`/publications/${pub.id}`}
+            subtitle={pub.data.authors}
+            description={pub.data.description}
+          />
+        ))}
+      </ul>
+    </section>
+
   </main>
   <Footer />
 </Layout>
 
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
-      ?.dataset?.layout;
-    if (indexLayout) {
-      sessionStorage.setItem("backUrl", "/");
-    }
-  });
-</script>

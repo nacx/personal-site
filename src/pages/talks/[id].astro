@@ -27,7 +27,7 @@ const formattedDate = date.toLocaleDateString("en-US", {
 
 <Layout title={`${title} | ${SITE.title}`} description={description}>
   <Header />
-  <BackButton />
+  <BackButton href="/talks" label="Talks" />
   <main id="main-content" class="app-layout pb-12">
     <h1 class="text-2xl font-bold text-accent sm:text-3xl mt-4">{title}</h1>
     <p class="mt-2 opacity-60 text-sm">{event} &mdash; {formattedDate}</p>
@@ -91,22 +91,18 @@ const formattedDate = date.toLocaleDateString("en-US", {
 
     <!-- Non-YouTube video link fallback -->
     {videoLink && !isYouTube && (
-      <div class="mt-8 p-4 border border-border rounded-lg">
-        <p class="opacity-60 text-sm mb-2">Watch the recording:</p>
-        <a
-          href={videoLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-accent hover:underline underline-offset-4"
-        >
-          {videoLink}
-        </a>
+      <div class="mt-8 aspect-video w-full">
+        <iframe
+          src={videoLink}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full rounded-lg"
+        ></iframe>
       </div>
     )}
 
-    <!-- Description / body content -->
     <article class="app-prose mt-8 w-full max-w-app">
-      <p>{description}</p>
       <Content />
     </article>
   </main>

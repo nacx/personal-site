@@ -5,6 +5,7 @@ import { SITE } from "./src/config";
 
 export default defineConfig({
   site: SITE.website,
+  base: "/",
   integrations: [sitemap()],
   vite: {
     // @ts-ignore - Vite version mismatch between tailwindcss and astro (https://github.com/withastro/astro/issues/14030)

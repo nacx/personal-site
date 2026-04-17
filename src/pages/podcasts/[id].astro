@@ -23,7 +23,7 @@ const formattedDate = date.toLocaleDateString("en-US", {
 
 <Layout title={`${title} | ${SITE.title}`} description={description}>
   <Header />
-  <BackButton />
+  <BackButton href="/podcasts" label="Podcasts" />
   <main id="main-content" class="app-layout pb-12">
     <h1 class="text-2xl font-bold text-accent sm:text-3xl mt-4">{title}</h1>
     <p class="mt-2 opacity-60 text-sm">
@@ -62,7 +62,6 @@ const formattedDate = date.toLocaleDateString("en-US", {
     </div>
 
     <article class="app-prose mt-8 w-full max-w-app">
-      <p>{description}</p>
       <Content />
     </article>
   </main>

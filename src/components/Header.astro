@@ -1,6 +1,7 @@
 ---
 import IconX from "@/assets/icons/IconX.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
+import IconHome from "@/assets/icons/IconHome.svg";
 import { SITE } from "@/config";
 
 const { pathname } = Astro.url;
@@ -39,9 +40,10 @@ const isActive = (path: string) => {
   >
     <a
       href="/"
-      class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+      aria-label="Home"
+      class="absolute py-1 sm:static sm:my-auto hover:text-accent transition-colors"
     >
-      {SITE.title}
+      <IconHome class="w-6 h-6" />
     </a>
     <nav
       id="nav-menu"
