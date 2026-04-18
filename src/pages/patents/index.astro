@@ -12,12 +12,12 @@ const patents = (await getCollection("patents")).sort(
 );
 ---
 
-<Layout title={`Patents | ${SITE.title}`} description="Issued and pending patents.">
+<Layout title={`Patents | ${SITE.title}`} description="Issued and pending patents">
   <Header />
   <main id="main-content" class="app-layout">
     <section class="pt-8 pb-6 border-b border-border">
       <h1 class="text-3xl font-bold sm:text-4xl">Patents</h1>
-      <p class="mt-2 opacity-60">Issued and pending patents.</p>
+      <p class="mt-2 opacity-60">Issued and pending patents</p>
     </section>
     <section class="pt-8 pb-12">
       <ul>
