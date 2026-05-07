@@ -13,11 +13,14 @@ export async function getStaticPaths() {
 }
 
 const { talk } = Astro.props;
-const { title, event, date, description, slidesLink, videoLink, codeLink, demoLink } = talk.data;
+const { title, event, date, description, slidesLink, videoLink, codeLink, demoLink, demoVideo } = talk.data;
 const { Content } = await render(talk);
 
 const youtubeId = videoLink ? extractYouTubeId(videoLink) : null;
 const isYouTube = youtubeId !== null;
+
+const demoYoutubeId = demoVideo ? extractYouTubeId(demoVideo) : null;
+const isDemoYouTube = demoYoutubeId !== null;
 
 const formattedDate = date.toLocaleDateString("en-US", {
   year: "numeric",
@@ -74,6 +77,16 @@ const formattedDate = date.toLocaleDateString("en-US", {
           Demo
         </a>
       )}
+      {demoVideo && (
+        <a
+          href={demoVideo}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm border border-border rounded px-3 py-1 hover:text-accent hover:border-accent transition-colors"
+        >
+          Demo Video
+        </a>
+      )}
     </div>
 
     <article class="app-prose mt-8 w-full max-w-app">
@@ -98,6 +111,32 @@ const formattedDate = date.toLocaleDateString("en-US", {
       <div class="mt-8 aspect-video w-full">
         <iframe
           src={videoLink}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full rounded-lg"
+        ></iframe>
+      </div>
+    )}
+
+    <!-- YouTube embed -->
+    {isDemoYouTube && (
+      <div class="mt-8 aspect-video w-full">
+        <iframe
+          src={`https://www.youtube.com/embed/${demoYoutubeId}`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full rounded-lg"
+        ></iframe>
+      </div>
+    )}
+
+    <!-- Non-YouTube video link fallback -->
+    {demoVideo && !isDemoYouTube && (
+      <div class="mt-8 aspect-video w-full">
+        <iframe
+          src={demoVideo}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen

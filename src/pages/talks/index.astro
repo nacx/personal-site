@@ -6,7 +6,7 @@ import Footer from "@/components/Footer.astro";
 import SectionItem from "@/components/SectionItem.astro";
 import { SITE } from "@/config";
 
-const talks = (await getCollection("talks")).sort(
+const talks = (await getCollection("talks")).filter(({ data }) => !data.draft).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
 ---

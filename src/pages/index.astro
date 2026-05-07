@@ -10,7 +10,7 @@ import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE, SECTIONS_PER_INDEX } from "@/config";
 import { SOCIALS } from "@/constants";
 
-const talks = (await getCollection("talks")).sort(
+const talks = (await getCollection("talks")).filter(({ data }) => !data.draft).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
 const patents = (await getCollection("patents")).sort(

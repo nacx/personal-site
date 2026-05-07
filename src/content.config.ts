@@ -9,6 +9,7 @@ export const PODCASTS_PATH = "src/data/podcasts";
 const talks = defineCollection({
   loader: glob({ pattern: "**/[^_]*.md", base: `./${TALKS_PATH}` }),
   schema: z.object({
+    draft: z.boolean().optional(),
     title: z.string(),
     event: z.string(),
     date: z.coerce.date(),
@@ -17,6 +18,7 @@ const talks = defineCollection({
     videoLink: z.string().optional(),
     codeLink: z.string().optional(),
     demoLink: z.string().optional(),
+    demoVideo: z.string().optional(),
   }),
 });
 

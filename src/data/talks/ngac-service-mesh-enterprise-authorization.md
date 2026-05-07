@@ -5,7 +5,7 @@ date: 2023-05-01
 description: "Introducing NGAC and Service Mesh for enterprise-wide authorization, with a demo of Policy as Code at scale."
 slidesLink: "https://speakerdeck.com/nacx/next-gen-authorization"
 videoLink: "https://www.youtube.com/watch?v=YZnJzCb72tQ"
-demoLink: "https://www.youtube.com/watch?v=WQAX6Qt34Ic"
+demoVideo: "https://www.youtube.com/watch?v=WQAX6Qt34Ic"
 ---
 
 In this session at the [4th Annual Multi-Cloud Conference](https://www.nist.gov/news-events/events/2023/05/4th-multi-cloud-conference-and-workshop)
