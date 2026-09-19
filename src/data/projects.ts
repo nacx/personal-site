@@ -7,8 +7,8 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    name: "envoyproxy/ai-gateway",
-    url: "https://github.com/envoyproxy/ai-gateway",
+    name: "theagentrouter/agent-router",
+    url: "https://github.com/theagentrouter/agent-router",
     description:
       "Open-source platform that uses Envoy Gateway to manage traffic between applications and generative AI services. Implements a two-tier gateway architecture for authentication, routing, rate limiting, and fine-grained control over AI model access, with support for OpenAI, Google Gemini, AWS Bedrock, and Anthropic.",
     role: "Maintainer",
