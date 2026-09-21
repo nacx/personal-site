@@ -4,6 +4,7 @@ event: "MCP Dev Summit Europe, London 2025"
 date: 2025-10-01
 description: "Framing MCP pain points and how an MCP gateway provides a solid foundation to leverage MCP at scale in enterprise environments."
 slidesLink: "https://speakerdeck.com/nacx/do-you-need-an-ai-gateway"
+speakerdeckId: 77ceca9fae43445daa7e6a1a1b4d1855
 videoLink: "https://www.youtube.com/watch?v=JBeHnvunf2M"
 ---
 

@@ -4,6 +4,7 @@ event: "Istio Weekly live stream, 2021"
 date: 2021-06-01
 description: "Presenting NGAC and why it is a perfect fit as an access control framework for micro-services."
 slidesLink: "https://speakerdeck.com/nacx/access-control-for-microservices"
+speakerdeckId: f269ead9a107469497ef698e9b0fa077
 videoLink: "https://www.youtube.com/watch?v=ItpCGpYupQQ"
 ---
 

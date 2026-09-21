@@ -4,6 +4,7 @@ event: "ApacheCon North America, 2016"
 date: 2016-05-01
 description: "The core concepts around jclouds and how the same code can be used to manage infrastructure in different cloud providers."
 slidesLink: "https://speakerdeck.com/nacx/rule-the-cloud-with-apache-jclouds"
+speakerdeckId: 5db22d162bcf417e879ddbb025ce984b
 ---
 
 Apache jclouds is an open source multi-cloud toolkit for the Java platform that gives you the freedom

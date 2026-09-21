@@ -4,7 +4,7 @@ event: "AGNTCon + MCPCon Europe 2026"
 date: 2026-09-17
 description: "A live agent workload end-to-end: routing, failover, cost visibility, and tool governance, and the operational pieces you need before running agents in production."
 slidesLink: "https://speakerdeck.com/nacx/your-agents-need-a-router-one-integration-for-every-model-and-tool"
-
+speakerdeckId: 39397303dbf94c72ba010975cb1e1489
 ---
 
 Every agent starts simple: one model, one SDK, a demo that works. Then comes the second provider, the MCP tools, the fallback logic, the rate-limit backoff — and suddenly half your codebase is integration glue that has nothing to do with what your agent actually does.

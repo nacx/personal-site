@@ -4,7 +4,6 @@ event: "Virtual EnvoyCon 2026"
 date: 2026-05-07
 description: "Extending Envoy without C++: how Go and Rust filters open the platform to a broader audience."
 videoLink: "https://www.youtube.com/watch?v=xO6aLbncxEE"
-
 ---
 
 Envoy is a highly extensible proxy that provides many mechanisms to extend its core functionality to specific use cases: Lua, ext-authz, ext-proc, WASM, dynamic modules... Leveraging those powerful features, however, is not easy. Some knowledge of Envoy internals is usually needed; the maturity of SDKs for languages other than C++ is an issue, and the overall developer UX is simply not there.

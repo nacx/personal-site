@@ -4,6 +4,7 @@ event: "DevSecOps and Zero Trust Architecture (ZTA) for Multi-Cloud Environments
 date: 2021-01-01
 description: "Showing how the process of provisioning runtime identities to the workloads of a Service Mesh works."
 slidesLink: "https://speakerdeck.com/nacx/identity-provisioning-in-a-service-mesh"
+speakerdeckId: 70609b56be404d52a0f49f23712e9342
 # videoLink: "https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/684682/uiconf_id/33598632/entry_id/1_yt1asfqe/embed/dynamic"
 videoLink: https://cdnapisec.kaltura.com/p/684682/sp/68468200/embedIframeJs/uiconf_id/33598632/partner_id/684682?iframeembed=true&playerId=kaltura_player&entry_id=1_yt1asfqe&flashvars[streamerType]=auto
 ---

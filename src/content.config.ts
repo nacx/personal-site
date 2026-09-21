@@ -15,6 +15,7 @@ const talks = defineCollection({
     date: z.coerce.date(),
     description: z.string(),
     slidesLink: z.string().optional(),
+    speakerdeckId: z.string().optional(),
     videoLink: z.string().optional(),
     codeLink: z.string().optional(),
     demoLink: z.string().optional(),

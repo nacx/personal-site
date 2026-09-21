@@ -4,6 +4,7 @@ event: "Software Crafters Barcelona, 2019"
 date: 2019-10-01
 description: "The core concepts of a Service Mesh, what this technology brings, and the use cases it is meant to solve."
 slidesLink: "https://speakerdeck.com/nacx/service-mesh-and-the-future-of-networking"
+speakerdeckId: ee87793dc3b24516aff77eb06682167e
 videoLink: "https://www.youtube.com/watch?v=VmwLYxqaY0I"
 ---
 

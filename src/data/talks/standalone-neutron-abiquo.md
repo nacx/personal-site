@@ -4,6 +4,7 @@ event: "OpenStack BCN 7th birthday meetup, 2017"
 date: 2017-10-01
 description: "How we integrated a standalone Neutron with Abiquo to implement an SDN solution without a full OpenStack deployment."
 slidesLink: "https://speakerdeck.com/nacx/standalone-neutron-how-we-integrated-it-with-abiquo"
+speakerdeckId: 3819ec636bbe4c1a8d5a163aded80db9
 ---
 
 This is a talk I gave at the OpenStack BCN 7th birthday meetup.

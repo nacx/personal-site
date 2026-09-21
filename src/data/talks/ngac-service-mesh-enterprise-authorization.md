@@ -4,6 +4,7 @@ event: "Zero Trust and High Assurance for Cloud Native Applications, NIST 2023"
 date: 2023-05-01
 description: "Introducing NGAC and Service Mesh for enterprise-wide authorization, with a demo of Policy as Code at scale."
 slidesLink: "https://speakerdeck.com/nacx/next-gen-authorization"
+speakerdeckId: 4a26b1647199425bb2453386c9d68227
 videoLink: "https://www.youtube.com/watch?v=YZnJzCb72tQ"
 demoVideo: "https://www.youtube.com/watch?v=WQAX6Qt34Ic"
 ---

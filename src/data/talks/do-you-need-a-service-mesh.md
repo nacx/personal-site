@@ -4,6 +4,7 @@ event: "CodeMotion Madrid, 2018 (Spanish)"
 date: 2018-11-01
 description: "Exploring what a service mesh is and what it can do for microservice web backends."
 slidesLink: "https://speakerdeck.com/nacx/do-you-need-a-service-mesh"
+speakerdeckId: 2d894eb606594e2c9a869ac7b2a67357
 videoLink: "https://www.youtube.com/watch?v=1eBPwXC43eY"
 ---
 

@@ -4,6 +4,7 @@ event: "Agentics Day: MCP + Agents. KubeCon EU 2026 Co-Located Event"
 date: 2026-04-01
 description: "How Agent Readiness pairs qualitative standards with enforceable control points to rescue agents from infinite prototype loops."
 slidesLink: "https://speakerdeck.com/nacx/rescue-agents-from-prototype-purgatory-operationalize-agent-readiness"
+speakerdeckId: 97dca0a770094a7d92cad03cbe2fb84f
 videoLink: "https://www.youtube.com/watch?v=6nxGgzi4uuE"
 ---
 

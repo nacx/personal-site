@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 const { talk } = Astro.props;
-const { title, event, date, description, slidesLink, videoLink, codeLink, demoLink, demoVideo } = talk.data;
+const { title, event, date, description, slidesLink, speakerdeckId, videoLink, codeLink, demoLink, demoVideo } = talk.data;
 const { Content } = await render(talk);
 
 const youtubeId = videoLink ? extractYouTubeId(videoLink) : null;
@@ -143,6 +143,18 @@ const formattedDate = date.toLocaleDateString("en-US", {
           class="w-full h-full rounded-lg"
         ></iframe>
       </div>
+    )}
+
+    {!videoLink && !demoVideo && speakerdeckId && (
+      <iframe
+        class="speakerdeck-iframe"
+        src={`https://speakerdeck.com/player/${speakerdeckId}`}
+        title={title}
+        allowfullscreen="true"
+        allow="web-share"
+        style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;"
+        data-ratio="1.7777777777777777"
+      ></iframe>
     )}
 
   </main>

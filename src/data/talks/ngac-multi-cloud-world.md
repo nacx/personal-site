@@ -4,6 +4,7 @@ event: "Service Mesh Day San Francisco, 2019"
 date: 2019-03-01
 description: "Introducing NGAC with a live demo showing how it augments traditional RBAC with time and location constraints."
 slidesLink: "https://speakerdeck.com/nacx/next-generation-access-control-ngac-for-the-multi-cloud-world"
+speakerdeckId: dd7fbbc71a97410aa15861c5be45708c
 videoLink: "https://www.youtube.com/watch?v=-4D8N0M-syA"
 ---
 

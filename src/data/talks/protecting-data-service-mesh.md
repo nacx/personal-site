@@ -4,6 +4,7 @@ event: "Identity Management & Access Control in Multi-cloud, NIST 2020"
 date: 2020-01-01
 description: "A demo on how a Service Mesh and NGAC can be used to provide fine-grained access control for data."
 slidesLink: "https://speakerdeck.com/nacx/protecting-your-data-with-a-service-mesh"
+speakerdeckId: c5debfc759c447bfabd8406bd974d73c
 #videoLink: "https://youtu.be/hQwtqjVN9xU?t=21823"
 videoLink: "https://cdnapisec.kaltura.com/p/684682/sp/68468200/embedIframeJs/uiconf_id/33598632/partner_id/684682?flashvars[mediaProxy.mediaPlayFrom]=2726&iframeembed=true&playerId=kaltura_player_1581021651&entry_id=1_ca66qpp8&flashvars[streamerType]=auto"
 ---
