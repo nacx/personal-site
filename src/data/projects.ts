@@ -39,6 +39,6 @@ export const PROJECTS: Project[] = [
     url: "https://github.com/apache/jclouds",
     description:
       "Multi-cloud Java toolkit that provides a unified interface for interacting with different cloud platforms, enabling developers to build portable applications across clouds. Supports key cloud services including compute, blob storage, and load balancing, while allowing full access to provider-specific features.",
-    role: "PMC Member",
+    role: "Project Management Committee",
   },
 ];
