@@ -59,6 +59,20 @@ html[data-theme="dark"] {
   @apply mx-auto w-full max-w-app px-4;
 }
 
+/* Fade the hero banner into the page so it reads as a glow behind the headshot */
+.hero-banner > img:first-child {
+  --hero-fade: radial-gradient(
+    ellipse closest-side at center,
+    #000 30%,
+    rgb(0 0 0 / 0.7) 52%,
+    rgb(0 0 0 / 0.35) 74%,
+    rgb(0 0 0 / 0.1) 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: var(--hero-fade);
+  mask-image: var(--hero-fade);
+}
+
 .active-nav {
   @apply underline decoration-accent decoration-2 underline-offset-6;
 }
