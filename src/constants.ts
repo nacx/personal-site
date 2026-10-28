@@ -1,6 +1,7 @@
 import type { Props } from "astro";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
+import IconSessionize from "@/assets/icons/IconSessionize.svg";
 import { SITE } from "@/config";
 
 interface Social {
@@ -22,5 +23,11 @@ export const SOCIALS: Social[] = [
     href: "https://www.linkedin.com/in/ignasibarrera",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
+  },
+  {
+    name: "Sessionize",
+    href: "https://sessionize.com/ignasi-barrera",
+    linkTitle: `${SITE.title} on Sessionize`,
+    icon: IconSessionize,
   },
 ] as const;
